@@ -25,9 +25,12 @@ def sift_down(i, data, swaps):
 
 def main():
     
-    n = int(input())
+    try:
+        n = int(input())
+    except ValueError:
+        print("")
+        return
     data = list(map(int, input().split()))
-    assert len(data) == n
 
     
     assert len(data) == n
