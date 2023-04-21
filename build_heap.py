@@ -47,7 +47,6 @@ if __name__ == "__main__":
 
 
 def main():
-    
     try:
         n = int(input())
     except ValueError:
@@ -63,6 +62,7 @@ def main():
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
+
 
 
 if __name__ == "__main__":
