@@ -8,6 +8,14 @@ def build_heap(data):
     return swaps
 
 
+def build_heap(data):
+    swaps = []
+    n = len(data)
+    for i in range(len(data) // 2, -1, -1):
+        sift_down(i, data, swaps)
+    return swaps
+
+
 def sift_down(i, data, swaps):
     n = len(data)
     max_index = i
@@ -21,6 +29,21 @@ def sift_down(i, data, swaps):
         data[i], data[max_index] = data[max_index], data[i]
         swaps.append((i, max_index))
         sift_down(max_index, data, swaps)
+
+
+def main():
+    n = int(input())
+    data = list(map(int, input().split()))
+    assert len(data) == n
+    swaps = build_heap(data)
+    print(len(swaps))
+    for i, j in swaps:
+        print(i, j)
+
+        
+if __name__ == "__main__":
+    main()
+
 
 
 def main():
