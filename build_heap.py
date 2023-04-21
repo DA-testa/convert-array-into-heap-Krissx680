@@ -48,12 +48,12 @@ if __name__ == "__main__":
 
 def main():
     try:
-        n = int(input())
+        n = int(input().strip())
     except ValueError:
         print('')
         return
     
-    data = list(map(int, input().split()))
+    data = list(map(int, input().strip().split()))
 
     assert len(data) == n
 
@@ -63,9 +63,9 @@ def main():
     for i, j in swaps:
         print(i, j)
 
-
 if __name__ == "__main__":
     main()
+
 
 
 
