@@ -32,6 +32,7 @@ def main():
         return
     data = list(map(int, input().split()))
 
+
     
     assert len(data) == n
 
