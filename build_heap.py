@@ -2,10 +2,11 @@
 
 def build_heap(data):
     swaps = []
-     n = len(data)
-    for i in range(n // 2, -1, -1):
+    n = len(data)
+    for i in range(len(data) // 2, -1, -1):
         sift_down(i, data, swaps)
     return swaps
+
 
 def sift_down(i, data, swaps):
     n = len(data)
