@@ -2,6 +2,7 @@
 
 def build_heap(data):
     swaps = []
+    n = len(data)
     for i in range(len(data) // 2, -1, -1):
         sift_down(i, data, swaps)
     return swaps
@@ -27,19 +28,19 @@ def main():
     try:
         n = int(input())
     except ValueError:
-        print("")
+        print('')
         return
+    
     data = list(map(int, input().split()))
 
-    
     assert len(data) == n
 
-  
     swaps = build_heap(data)
 
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
+
 
 if __name__ == "__main__":
     main()
